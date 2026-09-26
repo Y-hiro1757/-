@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>みんなの掲示板</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>大阪立命館の掲示板</h1>
+    <p>みんなで自由に話そう！</p>
+</header>
+
+
+<main>
+
+    <!-- =========================
+         スレッド作成
+    ========================== -->
+
+    <section class="create-area">
+
+        <h2>新しいスレッドを作る</h2>
+
+        <input
+            id="threadTitle"
+            type="text"
+            maxlength="100"
+            placeholder="スレッドのタイトル"
+        >
+
+        <input
+            id="threadName"
+            type="text"
+            maxlength="30"
+            placeholder="名前"
+        >
+
+        <textarea
+            id="threadText"
+            maxlength="1000"
+            placeholder="最初の書き込み"
+        ></textarea>
+
+        <button onclick="createThread()">
+            スレッドを作成
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         スレッド一覧
+    ========================== -->
+
+    <section id="threadArea">
+
+        <div class="list-header">
+
+            <h2>スレッド一覧</h2>
+
+            <!-- 検索 -->
+            <input
+                id="searchBox"
+                type="text"
+                placeholder="スレッドを検索"
+                oninput="searchThreads()"
+            >
+
+        </div>
+
+
+        <!-- 並び替え -->
+
+        <div class="sort-buttons">
+
+            <button onclick="setSort('new')">
+                🆕 新着
+            </button>
+
+            <button onclick="setSort('posts')">
+                💬 レス数
+            </button>
+
+            <button onclick="setSort('speed')">
+                🔥 勢い
+            </button>
+
+        </div>
+
+
+        <div id="threadList"></div>
+
+    </section>
+
+
+    <!-- =========================
+         スレッド画面
+    ========================== -->
+
+    <section
+        id="threadView"
+        class="thread-view"
+        style="display:none;"
+    >
+
+        <button
+            class="back-button"
+            onclick="showThreadList()"
+        >
+            ← スレッド一覧へ
+        </button>
+
+
+        <h2 id="viewTitle"></h2>
+
+
+        <div id="threadStats"></div>
+
+
+        <!-- レス一覧 -->
+
+        <div id="postList"></div>
+
+
+        <!-- =========================
+             レス投稿
+        ========================== -->
+
+        <div class="reply-area">
+
+            <h3>書き込む</h3>
+
+            <!-- 返信先 -->
+
+            <div id="replyTarget">
+                返信先：なし
+            </div>
+
+
+            <input
+                id="replyName"
+                type="text"
+                maxlength="30"
+                placeholder="名前"
+            >
+
+
+            <textarea
+                id="replyText"
+                maxlength="1000"
+                placeholder="本文"
+            ></textarea>
+
+
+            <button onclick="addReply()">
+                書き込む
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>みんなの掲示板</p>
+</footer>
+
+</body>
+</html>
+
+<!--メインプログラム-->
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

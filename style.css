@@ -1,0 +1,412 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        "Noto Sans JP",
+        sans-serif;
+
+    background: #eeeeee;
+
+    color: #333;
+}
+
+
+/* =========================
+   ヘッダー
+========================= */
+
+header {
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0 0 5px;
+}
+
+
+/* =========================
+   メイン
+========================= */
+
+main {
+    width: 95%;
+
+    max-width: 850px;
+
+    margin: 20px auto;
+}
+
+
+/* =========================
+   スレッド作成
+========================= */
+
+.create-area {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    margin-bottom: 25px;
+}
+
+.create-area h2 {
+    margin-top: 0;
+}
+
+
+/* =========================
+   入力欄
+========================= */
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+}
+
+textarea {
+    height: 120px;
+
+    resize: vertical;
+}
+
+
+/* =========================
+   ボタン
+========================= */
+
+button {
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 11px 16px;
+
+    background: #333;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+
+/* =========================
+   検索
+========================= */
+
+.list-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 10px;
+}
+
+.list-header h2 {
+    margin: 0;
+
+    flex: 1;
+}
+
+#searchBox {
+    width: 250px;
+
+    margin: 0;
+}
+
+
+/* =========================
+   並び替え
+========================= */
+
+.sort-buttons {
+    display: flex;
+
+    gap: 5px;
+
+    margin-bottom: 10px;
+
+    flex-wrap: wrap;
+}
+
+.sort-buttons button {
+    background: #666;
+}
+
+
+/* =========================
+   スレッド一覧
+========================= */
+
+.thread {
+    background: white;
+
+    border-bottom: 1px solid #ddd;
+
+    padding: 16px;
+
+    cursor: pointer;
+}
+
+.thread:hover {
+    background: #f8f8f8;
+}
+
+
+.thread-title {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #0645ad;
+
+    margin-bottom: 8px;
+}
+
+
+.thread-info {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+.speed {
+    color: #d35400;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   スレッド画面
+========================= */
+
+.thread-view {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 8px;
+}
+
+
+.back-button {
+    background: #777;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   スレッド情報
+========================= */
+
+#threadStats {
+    color: #777;
+
+    border-bottom: 1px solid #ddd;
+
+    padding-bottom: 10px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   レス
+========================= */
+
+.post {
+    border-top: 1px solid #ddd;
+
+    padding: 15px 5px;
+
+    position: relative;
+}
+
+
+.post:first-child {
+    border-top: none;
+}
+
+
+.post-number {
+    font-weight: bold;
+
+    margin-right: 8px;
+}
+
+
+.post-name {
+    color: #008000;
+
+    font-weight: bold;
+}
+
+
+.post-id {
+    color: #777;
+
+    font-size: 12px;
+
+    margin-left: 8px;
+}
+
+
+.post-date {
+    color: #888;
+
+    font-size: 12px;
+
+    margin-left: 10px;
+}
+
+
+.post-text {
+    margin-top: 8px;
+
+    line-height: 1.7;
+}
+
+
+.reply-link {
+    color: #0645ad;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+}
+
+
+.reply-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   >>返信
+========================= */
+
+.reply-reference {
+    background: #f1f5ff;
+
+    border-left: 4px solid #5577cc;
+
+    padding: 8px;
+
+    margin-bottom: 8px;
+
+    color: #555;
+}
+
+
+/* =========================
+   レス投稿
+========================= */
+
+.reply-area {
+    border-top: 2px solid #ddd;
+
+    margin-top: 20px;
+
+    padding-top: 20px;
+}
+
+
+#replyTarget {
+    background: #f5f5f5;
+
+    padding: 8px;
+
+    margin-bottom: 10px;
+
+    font-size: 13px;
+
+    color: #555;
+}
+
+
+/* =========================
+   フッター
+========================= */
+
+footer {
+    text-align: center;
+
+    color: #777;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   スマホ対応
+========================= */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 96%;
+    }
+
+
+    .list-header {
+        display: block;
+    }
+
+
+    #searchBox {
+        width: 100%;
+
+        margin-top: 10px;
+    }
+
+
+    .thread-title {
+        font-size: 16px;
+    }
+
+
+    .post {
+        font-size: 14px;
+    }
+
+}
