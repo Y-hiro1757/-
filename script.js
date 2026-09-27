@@ -711,7 +711,13 @@ async function addReply() {
 
         );
 
+        // 画面をすぐ更新
+thread.posts = newPosts;
 
+displayPosts(thread);
+displayThreadStats(thread);
+
+        
         // ==================================
         // 入力欄を空にする
         // ==================================
